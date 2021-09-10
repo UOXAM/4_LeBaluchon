@@ -24,6 +24,7 @@
 		C3ED912826EB9C1A00E5CA6E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */; };
 		C3ED912A26EB9C4B00E5CA6E /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */; };
 		C3ED912C26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912B26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift */; };
+		C3ED912E26EB9E2500E5CA6E /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912D26EB9E2500E5CA6E /* CurrencyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		C3ED912B26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
+		C3ED912D26EB9E2500E5CA6E /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				C3ED90FF26EB90AC00E5CA6E /* MeteoViewController.swift */,
+				C3ED912D26EB9E2500E5CA6E /* CurrencyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				C3ED910026EB90AC00E5CA6E /* MeteoViewController.swift in Sources */,
 				C3ED912626EB9A4200E5CA6E /* MeteoService.swift in Sources */,
 				C3ED912A26EB9C4B00E5CA6E /* UIViewController+Alert.swift in Sources */,
+				C3ED912E26EB9E2500E5CA6E /* CurrencyViewController.swift in Sources */,
 				C3ED90FC26EB90AC00E5CA6E /* AppDelegate.swift in Sources */,
 				C3ED912826EB9C1A00E5CA6E /* UIImageView.swift in Sources */,
 				C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */,
