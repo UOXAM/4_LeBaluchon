@@ -39,6 +39,7 @@
 		C3ED915526EBB32900E5CA6E /* URLProtocolFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED915426EBB32900E5CA6E /* URLProtocolFake.swift */; };
 		C3ED915726EBB37A00E5CA6E /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED915626EBB37A00E5CA6E /* FakeResponseData.swift */; };
 		C3ED915926EBB39A00E5CA6E /* InfoForFakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED915826EBB39A00E5CA6E /* InfoForFakeResponseData.swift */; };
+		C3ED915D26EBB62E00E5CA6E /* CurrencyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED915C26EBB62E00E5CA6E /* CurrencyServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		C3ED915426EBB32900E5CA6E /* URLProtocolFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolFake.swift; sourceTree = "<group>"; };
 		C3ED915626EBB37A00E5CA6E /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
 		C3ED915826EBB39A00E5CA6E /* InfoForFakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoForFakeResponseData.swift; sourceTree = "<group>"; };
+		C3ED915C26EBB62E00E5CA6E /* CurrencyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				C3ED914326EBB1CA00E5CA6E /* MeteoServiceTests.swift */,
+				C3ED915C26EBB62E00E5CA6E /* CurrencyServiceTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ED915D26EBB62E00E5CA6E /* CurrencyServiceTests.swift in Sources */,
 				C3ED915526EBB32900E5CA6E /* URLProtocolFake.swift in Sources */,
 				C3ED914426EBB1CA00E5CA6E /* MeteoServiceTests.swift in Sources */,
 				C3ED915726EBB37A00E5CA6E /* FakeResponseData.swift in Sources */,

@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "symbols": {
+        "CNY": "Chinese Yuan",
+        "EUR": "Euro",
+        "GBP": "British Pound Sterling",
+        "USD": "United States Dollar",
+    }
+}
