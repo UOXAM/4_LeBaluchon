@@ -17,6 +17,7 @@
 		C3ED911826EB956500E5CA6E /* URLSession+GenericCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */; };
 		C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911A26EB95C800E5CA6E /* NetworkError.swift */; };
 		C3ED911D26EB960300E5CA6E /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */; };
+		C3ED911F26EB968C00E5CA6E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911E26EB968C00E5CA6E /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+GenericCall.swift"; sourceTree = "<group>"; };
 		C3ED911A26EB95C800E5CA6E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		C3ED911E26EB968C00E5CA6E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */,
+				C3ED911E26EB968C00E5CA6E /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				C3ED90FC26EB90AC00E5CA6E /* AppDelegate.swift in Sources */,
 				C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */,
 				C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */,
+				C3ED911F26EB968C00E5CA6E /* UIColor.swift in Sources */,
 				C3ED911826EB956500E5CA6E /* URLSession+GenericCall.swift in Sources */,
 				C3ED90FE26EB90AC00E5CA6E /* SceneDelegate.swift in Sources */,
 			);
