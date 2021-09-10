@@ -36,6 +36,7 @@
 		C3ED914F26EBB27F00E5CA6E /* Meteo.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED914E26EBB27F00E5CA6E /* Meteo.json */; };
 		C3ED915126EBB29D00E5CA6E /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED915026EBB29D00E5CA6E /* Currency.json */; };
 		C3ED915326EBB2BA00E5CA6E /* CurrencyList.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED915226EBB2BA00E5CA6E /* CurrencyList.json */; };
+		C3ED915526EBB32900E5CA6E /* URLProtocolFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED915426EBB32900E5CA6E /* URLProtocolFake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		C3ED914E26EBB27F00E5CA6E /* Meteo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Meteo.json; sourceTree = "<group>"; };
 		C3ED915026EBB29D00E5CA6E /* Currency.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Currency.json; sourceTree = "<group>"; };
 		C3ED915226EBB2BA00E5CA6E /* CurrencyList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyList.json; sourceTree = "<group>"; };
+		C3ED915426EBB32900E5CA6E /* URLProtocolFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolFake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 				C3ED914E26EBB27F00E5CA6E /* Meteo.json */,
 				C3ED915026EBB29D00E5CA6E /* Currency.json */,
 				C3ED915226EBB2BA00E5CA6E /* CurrencyList.json */,
+				C3ED915426EBB32900E5CA6E /* URLProtocolFake.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ED915526EBB32900E5CA6E /* URLProtocolFake.swift in Sources */,
 				C3ED914426EBB1CA00E5CA6E /* LeBaluchonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
