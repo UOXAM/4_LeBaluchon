@@ -31,7 +31,14 @@ class MeteoViewController: UIViewController {
     private let meteoService = MeteoService()
     
     
+    // MARK: - ViewDidLoad
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        activityIndicator.isHidden = true
+        actualizeCurrentWeather()
+        buttonFormatting(button: actualizeButton)
+    }
     
     // MARK: - Network call
 

@@ -11,8 +11,8 @@ class TranslationViewController: UIViewController, UITextViewDelegate {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var initialTextView: UITextView!
     @IBOutlet weak var translationButton: UIButton!
+    @IBOutlet weak var initialTextView: UITextView!
     @IBOutlet weak var finalLanguageLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     

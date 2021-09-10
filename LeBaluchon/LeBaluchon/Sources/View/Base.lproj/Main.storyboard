@@ -206,7 +206,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Lvl-C7-6vp" id="3QQ-x6-chJ"/>
                         <outlet property="finalLanguageLabel" destination="cpx-Ce-xy0" id="zhA-GG-fLT"/>
-                        <outlet property="initialTextView" destination="BDk-HP-DhI" id="l2K-2G-FQ2"/>
+                        <outlet property="initialTextView" destination="BDk-HP-DhI" id="UrJ-MW-nHJ"/>
                         <outlet property="translationButton" destination="DOI-Ta-qbS" id="pDy-6c-mvc"/>
                     </connections>
                 </viewController>
