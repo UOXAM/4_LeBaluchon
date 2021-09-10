@@ -14,6 +14,9 @@
 		C3ED910526EB90AC00E5CA6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3ED910426EB90AC00E5CA6E /* Assets.xcassets */; };
 		C3ED910826EB90AC00E5CA6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3ED910626EB90AC00E5CA6E /* LaunchScreen.storyboard */; };
 		C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911526EB916400E5CA6E /* ApiKeys.swift */; };
+		C3ED911826EB956500E5CA6E /* URLSession+GenericCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */; };
+		C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911A26EB95C800E5CA6E /* NetworkError.swift */; };
+		C3ED911D26EB960300E5CA6E /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		C3ED910726EB90AC00E5CA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3ED910926EB90AC00E5CA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3ED911526EB916400E5CA6E /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+GenericCall.swift"; sourceTree = "<group>"; };
+		C3ED911A26EB95C800E5CA6E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		C3ED911026EB90BF00E5CA6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED911926EB95A900E5CA6E /* Network */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 		C3ED911326EB90F400E5CA6E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -116,6 +124,15 @@
 				C3ED910426EB90AC00E5CA6E /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3ED911926EB95A900E5CA6E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C3ED911A26EB95C800E5CA6E /* NetworkError.swift */,
+				C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ED911D26EB960300E5CA6E /* NetworkLogger.swift in Sources */,
 				C3ED910026EB90AC00E5CA6E /* ViewController.swift in Sources */,
 				C3ED90FC26EB90AC00E5CA6E /* AppDelegate.swift in Sources */,
 				C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */,
+				C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */,
+				C3ED911826EB956500E5CA6E /* URLSession+GenericCall.swift in Sources */,
 				C3ED90FE26EB90AC00E5CA6E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
