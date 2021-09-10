@@ -19,6 +19,7 @@
 		C3ED911D26EB960300E5CA6E /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */; };
 		C3ED911F26EB968C00E5CA6E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911E26EB968C00E5CA6E /* UIColor.swift */; };
 		C3ED912126EB96D900E5CA6E /* UrlEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */; };
+		C3ED912426EB99D600E5CA6E /* Meteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912326EB99D600E5CA6E /* Meteo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		C3ED911E26EB968C00E5CA6E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEncodable.swift; sourceTree = "<group>"; };
+		C3ED912326EB99D600E5CA6E /* Meteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		C3ED911026EB90BF00E5CA6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED912226EB99B700E5CA6E /* Meteo */,
 				C3ED911926EB95A900E5CA6E /* Network */,
 			);
 			path = Model;
@@ -139,6 +142,14 @@
 				C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C3ED912226EB99B700E5CA6E /* Meteo */ = {
+			isa = PBXGroup;
+			children = (
+				C3ED912326EB99D600E5CA6E /* Meteo.swift */,
+			);
+			path = Meteo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 				C3ED910026EB90AC00E5CA6E /* MeteoViewController.swift in Sources */,
 				C3ED90FC26EB90AC00E5CA6E /* AppDelegate.swift in Sources */,
 				C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */,
+				C3ED912426EB99D600E5CA6E /* Meteo.swift in Sources */,
 				C3ED912126EB96D900E5CA6E /* UrlEncodable.swift in Sources */,
 				C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */,
 				C3ED911F26EB968C00E5CA6E /* UIColor.swift in Sources */,
