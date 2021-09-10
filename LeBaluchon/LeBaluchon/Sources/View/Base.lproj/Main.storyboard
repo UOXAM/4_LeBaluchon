@@ -34,7 +34,7 @@
         <!--TRADUCTEUR-->
         <scene sceneID="DMW-8H-LsB">
             <objects>
-                <viewController id="KtZ-vk-eex" sceneMemberID="viewController">
+                <viewController id="KtZ-vk-eex" customClass="TranslationViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQN-LH-sFU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

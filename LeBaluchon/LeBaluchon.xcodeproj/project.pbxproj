@@ -29,6 +29,7 @@
 		C3ED913326EB9F1100E5CA6E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913226EB9F1100E5CA6E /* Currency.swift */; };
 		C3ED913626EBACD900E5CA6E /* GoogleTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913526EBACD900E5CA6E /* GoogleTranslation.swift */; };
 		C3ED913826EBACF900E5CA6E /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913726EBACF900E5CA6E /* TranslationService.swift */; };
+		C3ED913A26EBAD8200E5CA6E /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913926EBAD8200E5CA6E /* TranslationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		C3ED913226EB9F1100E5CA6E /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		C3ED913526EBACD900E5CA6E /* GoogleTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTranslation.swift; sourceTree = "<group>"; };
 		C3ED913726EBACF900E5CA6E /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
+		C3ED913926EBAD8200E5CA6E /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				C3ED90FF26EB90AC00E5CA6E /* MeteoViewController.swift */,
 				C3ED912D26EB9E2500E5CA6E /* CurrencyViewController.swift */,
+				C3ED913926EBAD8200E5CA6E /* TranslationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				C3ED910026EB90AC00E5CA6E /* MeteoViewController.swift in Sources */,
 				C3ED912626EB9A4200E5CA6E /* MeteoService.swift in Sources */,
 				C3ED912A26EB9C4B00E5CA6E /* UIViewController+Alert.swift in Sources */,
+				C3ED913A26EBAD8200E5CA6E /* TranslationViewController.swift in Sources */,
 				C3ED912E26EB9E2500E5CA6E /* CurrencyViewController.swift in Sources */,
 				C3ED90FC26EB90AC00E5CA6E /* AppDelegate.swift in Sources */,
 				C3ED912826EB9C1A00E5CA6E /* UIImageView.swift in Sources */,
