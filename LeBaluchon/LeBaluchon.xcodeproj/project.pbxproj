@@ -30,6 +30,7 @@
 		C3ED913626EBACD900E5CA6E /* GoogleTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913526EBACD900E5CA6E /* GoogleTranslation.swift */; };
 		C3ED913826EBACF900E5CA6E /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913726EBACF900E5CA6E /* TranslationService.swift */; };
 		C3ED913A26EBAD8200E5CA6E /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913926EBAD8200E5CA6E /* TranslationViewController.swift */; };
+		C3ED913C26EBAE3300E5CA6E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913B26EBAE3300E5CA6E /* UITextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		C3ED913526EBACD900E5CA6E /* GoogleTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTranslation.swift; sourceTree = "<group>"; };
 		C3ED913726EBACF900E5CA6E /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		C3ED913926EBAD8200E5CA6E /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		C3ED913B26EBAE3300E5CA6E /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */,
+				C3ED913B26EBAE3300E5CA6E /* UITextView.swift */,
 				C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */,
 				C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */,
 				C3ED912B26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift */,
@@ -275,6 +278,7 @@
 				C3ED913A26EBAD8200E5CA6E /* TranslationViewController.swift in Sources */,
 				C3ED912E26EB9E2500E5CA6E /* CurrencyViewController.swift in Sources */,
 				C3ED90FC26EB90AC00E5CA6E /* AppDelegate.swift in Sources */,
+				C3ED913C26EBAE3300E5CA6E /* UITextView.swift in Sources */,
 				C3ED912826EB9C1A00E5CA6E /* UIImageView.swift in Sources */,
 				C3ED913826EBACF900E5CA6E /* TranslationService.swift in Sources */,
 				C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */,

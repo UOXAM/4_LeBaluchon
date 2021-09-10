@@ -40,6 +40,11 @@ class TranslationViewController: UIViewController, UITextViewDelegate {
         initialTextView.delegate = self
     }
     
+    // MARK: - Formatting TextView
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        initialTextView.centerVerticalText()
+    }
     
     // MARK: - Action & Network call (rates))
 
