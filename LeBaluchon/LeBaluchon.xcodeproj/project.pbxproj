@@ -20,6 +20,7 @@
 		C3ED911F26EB968C00E5CA6E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911E26EB968C00E5CA6E /* UIColor.swift */; };
 		C3ED912126EB96D900E5CA6E /* UrlEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */; };
 		C3ED912426EB99D600E5CA6E /* Meteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912326EB99D600E5CA6E /* Meteo.swift */; };
+		C3ED912626EB9A4200E5CA6E /* MeteoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912526EB9A4200E5CA6E /* MeteoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C3ED911E26EB968C00E5CA6E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEncodable.swift; sourceTree = "<group>"; };
 		C3ED912326EB99D600E5CA6E /* Meteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteo.swift; sourceTree = "<group>"; };
+		C3ED912526EB9A4200E5CA6E /* MeteoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				C3ED912326EB99D600E5CA6E /* Meteo.swift */,
+				C3ED912526EB9A4200E5CA6E /* MeteoService.swift */,
 			);
 			path = Meteo;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				C3ED911D26EB960300E5CA6E /* NetworkLogger.swift in Sources */,
 				C3ED910026EB90AC00E5CA6E /* MeteoViewController.swift in Sources */,
+				C3ED912626EB9A4200E5CA6E /* MeteoService.swift in Sources */,
 				C3ED90FC26EB90AC00E5CA6E /* AppDelegate.swift in Sources */,
 				C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */,
 				C3ED912426EB99D600E5CA6E /* Meteo.swift in Sources */,
