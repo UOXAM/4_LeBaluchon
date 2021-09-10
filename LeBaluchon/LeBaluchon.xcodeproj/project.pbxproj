@@ -23,6 +23,7 @@
 		C3ED912626EB9A4200E5CA6E /* MeteoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912526EB9A4200E5CA6E /* MeteoService.swift */; };
 		C3ED912826EB9C1A00E5CA6E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */; };
 		C3ED912A26EB9C4B00E5CA6E /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */; };
+		C3ED912C26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912B26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		C3ED912526EB9A4200E5CA6E /* MeteoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoService.swift; sourceTree = "<group>"; };
 		C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		C3ED912B26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */,
 				C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */,
 				C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */,
+				C3ED912B26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift */,
 				C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */,
 				C3ED911E26EB968C00E5CA6E /* UIColor.swift */,
 			);
@@ -243,6 +246,7 @@
 				C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */,
 				C3ED911F26EB968C00E5CA6E /* UIColor.swift in Sources */,
 				C3ED911826EB956500E5CA6E /* URLSession+GenericCall.swift in Sources */,
+				C3ED912C26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift in Sources */,
 				C3ED90FE26EB90AC00E5CA6E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
