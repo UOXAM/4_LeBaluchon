@@ -21,6 +21,8 @@
 		C3ED912126EB96D900E5CA6E /* UrlEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */; };
 		C3ED912426EB99D600E5CA6E /* Meteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912326EB99D600E5CA6E /* Meteo.swift */; };
 		C3ED912626EB9A4200E5CA6E /* MeteoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912526EB9A4200E5CA6E /* MeteoService.swift */; };
+		C3ED912826EB9C1A00E5CA6E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */; };
+		C3ED912A26EB9C4B00E5CA6E /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEncodable.swift; sourceTree = "<group>"; };
 		C3ED912326EB99D600E5CA6E /* Meteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteo.swift; sourceTree = "<group>"; };
 		C3ED912526EB9A4200E5CA6E /* MeteoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoService.swift; sourceTree = "<group>"; };
+		C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */,
+				C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */,
+				C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */,
 				C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */,
 				C3ED911E26EB968C00E5CA6E /* UIColor.swift */,
 			);
@@ -228,7 +234,9 @@
 				C3ED911D26EB960300E5CA6E /* NetworkLogger.swift in Sources */,
 				C3ED910026EB90AC00E5CA6E /* MeteoViewController.swift in Sources */,
 				C3ED912626EB9A4200E5CA6E /* MeteoService.swift in Sources */,
+				C3ED912A26EB9C4B00E5CA6E /* UIViewController+Alert.swift in Sources */,
 				C3ED90FC26EB90AC00E5CA6E /* AppDelegate.swift in Sources */,
+				C3ED912826EB9C1A00E5CA6E /* UIImageView.swift in Sources */,
 				C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */,
 				C3ED912426EB99D600E5CA6E /* Meteo.swift in Sources */,
 				C3ED912126EB96D900E5CA6E /* UrlEncodable.swift in Sources */,

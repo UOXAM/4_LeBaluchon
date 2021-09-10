@@ -737,7 +737,6 @@
                         <outlet property="firstCityImage" destination="mfM-j3-EJc" id="XVv-88-Pkr"/>
                         <outlet property="firstCityNameLabel" destination="8FE-Qn-7bQ" id="2vS-J6-XaY"/>
                         <outlet property="firstCityTemperatureLabel" destination="4U5-g1-Rab" id="kqj-d1-iwq"/>
-                        <outlet property="firstCitytemperatureLabel" destination="4U5-g1-Rab" id="OqK-LO-F1j"/>
                         <outlet property="secondCityDescriptionLabel" destination="Em2-ir-Uyc" id="8Uk-JZ-dzg"/>
                         <outlet property="secondCityImage" destination="s3J-sq-UlW" id="abj-bf-Dqh"/>
                         <outlet property="secondCityNameLabel" destination="xcF-kQ-M3g" id="gW4-gf-DeF"/>

@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension WeatherService: UrlEncodable {}
+extension MeteoService: UrlEncodable {}
 
-final class WeatherService {
+final class MeteoService {
 
     // MARK: - Properties
 
