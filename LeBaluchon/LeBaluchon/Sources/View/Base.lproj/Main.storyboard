@@ -731,16 +731,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="MÉTÉO DU JOUR" id="WPE-Bw-rNY"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="mIy-QR-ZkP" id="n9j-oi-gOu"/>
-                        <outlet property="actualizeButton" destination="rvN-rO-Dp6" id="TKy-Qf-ldY"/>
-                        <outlet property="firstCityDescriptionLabel" destination="Pof-L0-Bcy" id="Qfm-sO-UGo"/>
-                        <outlet property="firstCityImage" destination="mfM-j3-EJc" id="HcL-lO-6dz"/>
-                        <outlet property="firstCityNameLabel" destination="8FE-Qn-7bQ" id="reN-Fh-qld"/>
+                        <outlet property="activityIndicator" destination="mIy-QR-ZkP" id="baF-Ud-SLQ"/>
+                        <outlet property="actualizeButton" destination="rvN-rO-Dp6" id="Id0-HN-Edm"/>
+                        <outlet property="firstCityDescriptionLabel" destination="Pof-L0-Bcy" id="h63-Rq-rJU"/>
+                        <outlet property="firstCityImage" destination="mfM-j3-EJc" id="XVv-88-Pkr"/>
+                        <outlet property="firstCityNameLabel" destination="8FE-Qn-7bQ" id="2vS-J6-XaY"/>
                         <outlet property="firstCityTemperatureLabel" destination="4U5-g1-Rab" id="kqj-d1-iwq"/>
-                        <outlet property="secondCityDescriptionLabel" destination="Em2-ir-Uyc" id="3J3-XA-DMy"/>
-                        <outlet property="secondCityImage" destination="s3J-sq-UlW" id="kes-4u-neM"/>
-                        <outlet property="secondCityNameLabel" destination="xcF-kQ-M3g" id="JkV-aE-ubV"/>
-                        <outlet property="secondCityTemperatureLabel" destination="scZ-OZ-xDD" id="KX7-KY-OnG"/>
+                        <outlet property="firstCitytemperatureLabel" destination="4U5-g1-Rab" id="OqK-LO-F1j"/>
+                        <outlet property="secondCityDescriptionLabel" destination="Em2-ir-Uyc" id="8Uk-JZ-dzg"/>
+                        <outlet property="secondCityImage" destination="s3J-sq-UlW" id="abj-bf-Dqh"/>
+                        <outlet property="secondCityNameLabel" destination="xcF-kQ-M3g" id="gW4-gf-DeF"/>
+                        <outlet property="secondCityTemperatureLabel" destination="scZ-OZ-xDD" id="4Cw-Jn-div"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O10-NB-JeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
