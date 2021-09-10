@@ -34,7 +34,7 @@
         <!--TRADUCTEUR-->
         <scene sceneID="DMW-8H-LsB">
             <objects>
-                <viewController id="KtZ-vk-eex" customClass="TranslationWelcomeViewController" customModule="Le_Baluchon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KtZ-vk-eex" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQN-LH-sFU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="KtZ-vk-eex" id="Ixl-Mq-s0R"/>
+                                                    <outlet property="delegate" destination="KtZ-vk-eex" id="6wb-8D-eTX"/>
                                                 </connections>
                                             </textView>
                                         </subviews>
@@ -108,7 +108,6 @@
                                                             <color key="titleColor" red="0.11372549830000001" green="0.2470588088" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="conversionButton:" destination="YuB-2E-MAd" eventType="touchUpInside" id="4we-SG-PGs"/>
                                                             <action selector="translationButton:" destination="KtZ-vk-eex" eventType="touchUpInside" id="HeS-Xn-H6H"/>
                                                         </connections>
                                                     </button>
@@ -249,7 +248,7 @@
         <!--CONVERTISSEUR-->
         <scene sceneID="JMt-T3-VXE">
             <objects>
-                <viewController id="YuB-2E-MAd" customClass="CurrencyWelcomeViewController" customModule="Le_Baluchon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YuB-2E-MAd" customClass="CurrencyViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JYh-AA-XTF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,8 +287,8 @@
                                                                         <rect key="frame" x="15" y="0.0" width="344" height="157.5"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <connections>
-                                                                            <outlet property="dataSource" destination="YuB-2E-MAd" id="pqZ-aY-pZP"/>
-                                                                            <outlet property="delegate" destination="YuB-2E-MAd" id="awf-lk-T0Y"/>
+                                                                            <outlet property="dataSource" destination="YuB-2E-MAd" id="fWt-ut-RgH"/>
+                                                                            <outlet property="delegate" destination="YuB-2E-MAd" id="BXS-sE-g2D"/>
                                                                         </connections>
                                                                     </pickerView>
                                                                 </subviews>
@@ -311,7 +310,7 @@
                                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="50"/>
                                                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" returnKeyType="continue" smartQuotesType="no"/>
                                                                 <connections>
-                                                                    <outlet property="delegate" destination="YuB-2E-MAd" id="pjg-Mu-tak"/>
+                                                                    <outlet property="delegate" destination="YuB-2E-MAd" id="TQ1-ae-XuI"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
@@ -424,8 +423,8 @@
                                                                         <rect key="frame" x="15" y="0.0" width="344" height="157.5"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <connections>
-                                                                            <outlet property="dataSource" destination="YuB-2E-MAd" id="cwk-IM-I2t"/>
-                                                                            <outlet property="delegate" destination="YuB-2E-MAd" id="C7Q-qp-Dfz"/>
+                                                                            <outlet property="dataSource" destination="YuB-2E-MAd" id="QSl-pg-1z0"/>
+                                                                            <outlet property="delegate" destination="YuB-2E-MAd" id="peQ-zr-iYH"/>
                                                                         </connections>
                                                                     </pickerView>
                                                                 </subviews>
@@ -511,14 +510,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="CONVERTISSEUR" largeTitleDisplayMode="always" id="g21-9l-XBn"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="be8-Fe-B6F" id="mAH-Is-6Jh"/>
+                        <outlet property="activityIndicator" destination="be8-Fe-B6F" id="TMy-FD-Q0I"/>
                         <outlet property="conversionButton" destination="z0g-PW-P0Z" id="pVm-Rw-Jkl"/>
                         <outlet property="dateActualizationStackView" destination="1HB-vK-F1k" id="Jbw-eq-M24"/>
                         <outlet property="dateCurrencyRateLabel" destination="jW6-Q8-PgU" id="dF5-oZ-Daa"/>
-                        <outlet property="finalCurrencyPickerView" destination="dTO-zy-lIV" id="uTL-6m-Tlh"/>
+                        <outlet property="finalCurrencyPickerView" destination="dTO-zy-lIV" id="BeW-LY-ULs"/>
                         <outlet property="finalCurrencyStackView" destination="Hkc-kN-G8L" id="kc2-c2-Ts8"/>
                         <outlet property="fromAmountTextField" destination="Wtk-jZ-zl8" id="keg-Or-ytZ"/>
-                        <outlet property="initialCurrencyPickerView" destination="qkg-TX-O9k" id="Hrn-4h-Q6Z"/>
+                        <outlet property="initialCurrencyPickerView" destination="qkg-TX-O9k" id="jFQ-fb-qhU"/>
                         <outlet property="initialCurrencyStackView" destination="YVm-pj-BW2" id="VGY-ZS-848"/>
                         <outlet property="toAmountLabel" destination="U3Q-ub-FB9" id="bGS-eR-Ma8"/>
                     </connections>
@@ -554,7 +553,7 @@
         <!--MÉTÉO DU JOUR-->
         <scene sceneID="QM5-2z-9L3">
             <objects>
-                <viewController id="HfS-25-yc7" customClass="WeatherWelcomeViewController" customModule="Le_Baluchon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HfS-25-yc7" customClass="MeteoViewController" customModule="LeBaluchon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R1S-Kf-pvg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
