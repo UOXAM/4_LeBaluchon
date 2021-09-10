@@ -1,25 +1,51 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6if-Bo-T2d">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="js1-9s-bRi">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="6if-Bo-T2d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PfX-7i-mzf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDb-zn-GSU">
+                                <rect key="frame" x="62" y="308" width="290" height="290"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeBaluchon_white_Plan de travail 1-1" translatesAutoresizingMaskIntoConstraints="NO" id="mPa-c4-wY3">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JDb-zn-GSU" secondAttribute="height" multiplier="1:1" id="0fw-rl-ItJ"/>
+                                    <constraint firstItem="mPa-c4-wY3" firstAttribute="centerY" secondItem="JDb-zn-GSU" secondAttribute="centerY" id="TRS-yf-wFM"/>
+                                    <constraint firstItem="mPa-c4-wY3" firstAttribute="width" secondItem="JDb-zn-GSU" secondAttribute="width" id="ckt-cP-YVM"/>
+                                    <constraint firstItem="mPa-c4-wY3" firstAttribute="height" secondItem="JDb-zn-GSU" secondAttribute="height" id="eKC-jG-mul"/>
+                                    <constraint firstItem="mPa-c4-wY3" firstAttribute="centerX" secondItem="JDb-zn-GSU" secondAttribute="centerX" id="f2j-eh-Gpa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rPk-Xo-WP6"/>
+                        <color key="backgroundColor" red="0.031372550870000002" green="0.1686274707" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JDb-zn-GSU" firstAttribute="centerY" secondItem="rPk-Xo-WP6" secondAttribute="centerY" id="3ed-nr-vKa"/>
+                            <constraint firstItem="JDb-zn-GSU" firstAttribute="centerX" secondItem="rPk-Xo-WP6" secondAttribute="centerX" id="Fn3-pi-37x"/>
+                            <constraint firstItem="JDb-zn-GSU" firstAttribute="width" secondItem="PfX-7i-mzf" secondAttribute="width" multiplier="0.7" id="MSA-9p-H20"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JzS-66-CCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="322" y="54"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LeBaluchon_white_Plan de travail 1-1" width="6668" height="6405"/>
+    </resources>
 </document>
