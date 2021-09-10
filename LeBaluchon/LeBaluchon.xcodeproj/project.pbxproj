@@ -32,6 +32,10 @@
 		C3ED913A26EBAD8200E5CA6E /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913926EBAD8200E5CA6E /* TranslationViewController.swift */; };
 		C3ED913C26EBAE3300E5CA6E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED913B26EBAE3300E5CA6E /* UITextView.swift */; };
 		C3ED914426EBB1CA00E5CA6E /* LeBaluchonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED914326EBB1CA00E5CA6E /* LeBaluchonTests.swift */; };
+		C3ED914D26EBB25E00E5CA6E /* GoogleTranslation.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED914C26EBB25E00E5CA6E /* GoogleTranslation.json */; };
+		C3ED914F26EBB27F00E5CA6E /* Meteo.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED914E26EBB27F00E5CA6E /* Meteo.json */; };
+		C3ED915126EBB29D00E5CA6E /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED915026EBB29D00E5CA6E /* Currency.json */; };
+		C3ED915326EBB2BA00E5CA6E /* CurrencyList.json in Resources */ = {isa = PBXBuildFile; fileRef = C3ED915226EBB2BA00E5CA6E /* CurrencyList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,10 @@
 		C3ED914126EBB1CA00E5CA6E /* LeBaluchonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeBaluchonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3ED914326EBB1CA00E5CA6E /* LeBaluchonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeBaluchonTests.swift; sourceTree = "<group>"; };
 		C3ED914526EBB1CA00E5CA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3ED914C26EBB25E00E5CA6E /* GoogleTranslation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GoogleTranslation.json; sourceTree = "<group>"; };
+		C3ED914E26EBB27F00E5CA6E /* Meteo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Meteo.json; sourceTree = "<group>"; };
+		C3ED915026EBB29D00E5CA6E /* Currency.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Currency.json; sourceTree = "<group>"; };
+		C3ED915226EBB2BA00E5CA6E /* CurrencyList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CurrencyList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,10 +235,22 @@
 		C3ED914226EBB1CA00E5CA6E /* LeBaluchonTests */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED914B26EBB22700E5CA6E /* Helpers */,
 				C3ED914326EBB1CA00E5CA6E /* LeBaluchonTests.swift */,
 				C3ED914526EBB1CA00E5CA6E /* Info.plist */,
 			);
 			path = LeBaluchonTests;
+			sourceTree = "<group>";
+		};
+		C3ED914B26EBB22700E5CA6E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C3ED914C26EBB25E00E5CA6E /* GoogleTranslation.json */,
+				C3ED914E26EBB27F00E5CA6E /* Meteo.json */,
+				C3ED915026EBB29D00E5CA6E /* Currency.json */,
+				C3ED915226EBB2BA00E5CA6E /* CurrencyList.json */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +343,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ED915326EBB2BA00E5CA6E /* CurrencyList.json in Resources */,
+				C3ED915126EBB29D00E5CA6E /* Currency.json in Resources */,
+				C3ED914F26EBB27F00E5CA6E /* Meteo.json in Resources */,
+				C3ED914D26EBB25E00E5CA6E /* GoogleTranslation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
