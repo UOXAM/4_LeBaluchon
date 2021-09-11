@@ -1,6 +1,6 @@
 //
-//  weather.swift
-//  Le Baluchon
+//  Meteo.swift
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 31/08/2021.
 //

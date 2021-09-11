@@ -1,6 +1,6 @@
 //
-//  TraductionWelcomeViewController.swift
-//  Le Baluchon
+//  TranslationViewController.swift
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 19/08/2021.
 //
@@ -26,16 +26,17 @@ class TranslationViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Dismiss Keybpard
         self.hideKeyboardWhenTappedAround()
         
         activityIndicator.isHidden = true
         buttonFormatting(button: translationButton)
         
+        // Formatting
         initialTextView.layer.borderWidth = 1
-        initialTextView.layer.borderColor = UIColor.systemGray5.cgColor
-        
+        initialTextView.layer.borderColor = UIColor.systemGray4.cgColor
         finalLanguageLabel.layer.borderWidth = 1
-        finalLanguageLabel.layer.borderColor = UIColor.systemGray5.cgColor
+        finalLanguageLabel.layer.borderColor = UIColor.systemGray4.cgColor
         
         initialTextView.delegate = self
     }
@@ -56,6 +57,7 @@ class TranslationViewController: UIViewController, UITextViewDelegate {
         translationService.fetchTextTranslation(text: initialText) { [weak self] result in
 
             DispatchQueue.main.async {
+                // Conversion Button not available
                 self?.activityIndicator.startAnimating()
                 self?.translationButton.isEnabled = false
                 
@@ -63,12 +65,11 @@ class TranslationViewController: UIViewController, UITextViewDelegate {
                 
                 case .success(let googleTranslation):
                     self?.finalLanguageLabel.text = googleTranslation.data.translations[0].translatedText
-                    self?.activityIndicator.stopAnimating()
 
                 case.failure(let error):
                     self?.showAlert(with: error.description)
-                    self?.activityIndicator.stopAnimating()
                 }
+                // Conversion Button available
                 self?.translationButton.isEnabled = true
                 self?.activityIndicator.stopAnimating()
             }

@@ -1,6 +1,6 @@
 //
 //  NetworkError.swift
-//  Le Baluchon
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 23/08/2021.
 //

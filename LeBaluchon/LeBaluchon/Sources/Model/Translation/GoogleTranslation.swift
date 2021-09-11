@@ -1,6 +1,6 @@
 //
-//  Translation.swift
-//  Le Baluchon
+//  GoogleTranslation.swift
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 05/09/2021.
 //

@@ -1,6 +1,6 @@
 //
-//  ExchangeWelcomeViewController.swift
-//  Le Baluchon
+//  CurrencyViewController.swift
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 19/08/2021.
 //
@@ -15,9 +15,7 @@ class CurrencyViewController: UIViewController {
     @IBOutlet weak var toAmountLabel: UILabel!
     @IBOutlet weak var finalCurrencyPickerView: UIPickerView!
     @IBOutlet weak var initialCurrencyPickerView: UIPickerView!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var conversionButton: UIButton!
     @IBOutlet weak var initialCurrencyStackView: UIStackView!
     @IBOutlet weak var finalCurrencyStackView: UIStackView!
@@ -25,23 +23,17 @@ class CurrencyViewController: UIViewController {
     @IBOutlet weak var dateActualizationStackView: UIStackView!
             
     // MARK: - Properties
+    
     private let exchangeService = CurrencyService()
     private var currencyListArray: [String] = []
     
     // MARK: - viewDidLoad & Network call (currency list)
     
     override func viewDidLoad() {
-        // Dégradé de couleur :
-//        let gradient = CAGradientLayer()
-//        gradient.frame = finalCurrencyStackView.bounds
-//        gradient.colors = [UIColor.purple.cgColor, UIColor.orange.cgColor]
-//        gradient.locations = [0, 1]
-//        gradient.startPoint = CGPoint(x: 0, y: 0)
-//        gradient.endPoint = CGPoint(x: 1, y: 1)
-//        view.layer.addSublayer(gradient)
-
+        
         super.viewDidLoad()
         
+        // Dismiss Keybpard
         self.hideKeyboardWhenTappedAround()
         
         initialCurrencyPickerView.delegate = self
@@ -51,24 +43,23 @@ class CurrencyViewController: UIViewController {
         
         activityIndicator.isHidden = true
         
+        // Formatting
         dateActualizationStackView.layer.borderWidth = 1
         dateActualizationStackView.layer.borderColor = UIColor.systemGray4.cgColor
         buttonFormatting(button: conversionButton)
-//        stackViewFormatting(stackView: initialCurrencyStackView)
-//        stackViewFormatting(stackView: finalCurrencyStackView)
         
         // Network call to keep list of currencies available
         exchangeService.fetchCurrencyList { [weak self] result in
             
             DispatchQueue.main.async {
+                // Conversion Button not available
                 self?.activityIndicator.startAnimating()
                 self?.conversionButton.isEnabled = false
-
+                
                 switch result {
                 case .success(let currencyList):
                     // Transform dictionary to array
                     self?.currencyListArray = currencyList.symbols.map { "\($0.key) : \($0.value)" }
-//                    { "\($0) : \($1)" }
                     // Sort the array by alphabetical order
                     self?.currencyListArray = self!.currencyListArray.sorted { $0 < $1 }
                     // PickerView : actualize
@@ -79,15 +70,13 @@ class CurrencyViewController: UIViewController {
                     self?.initialCurrencyPickerView.selectRow(euroCurrencyCode, inComponent: 0, animated: false)
                     let usdCurrencyCode = self?.currencyListArray.firstIndex(of: "USD : United States Dollar") ?? 1
                     self?.finalCurrencyPickerView.selectRow(usdCurrencyCode, inComponent: 0, animated: false)
-
-                    self?.activityIndicator.stopAnimating()
-
-//                    print(currencyListArray)
+                        
                 case.failure(let error):
                     self?.showAlert(with: error.description)
                     self?.activityIndicator.stopAnimating()
 
                 }
+                // Conversion Button available
                 self?.conversionButton.isEnabled = true
                 self?.activityIndicator.stopAnimating()
                 
@@ -138,8 +127,8 @@ class CurrencyViewController: UIViewController {
         }
     }
     
-    private
-    func getCurrencyCode(pickerView: UIPickerView?) -> String {
+    // Take the first part (Currency code) of the row selected in the PickerView
+    private func getCurrencyCode(pickerView: UIPickerView?) -> String {
         guard let currencyIndex = pickerView?.selectedRow(inComponent: 0) else {return ""}
         let currency :String = currencyListArray[currencyIndex]
         return currency.components(separatedBy: " : ")[0]
@@ -151,24 +140,17 @@ class CurrencyViewController: UIViewController {
 
 extension CurrencyViewController : UIPickerViewDelegate, UIPickerViewDataSource {
         
-    // Number of elements to show (column)
-        
+    // Number of elements to show (columns)
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-                
     // Number of rows
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return currencyListArray.count
     }
-    
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-
         let string = currencyListArray[row]
         return NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: UIColor.deepBlue])
     }
-    
-
-
         
 }

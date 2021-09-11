@@ -1,6 +1,6 @@
 //
-//  ExchangeService.swift
-//  Le Baluchon
+//  CurrencyService.swift
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 19/08/2021.
 //
