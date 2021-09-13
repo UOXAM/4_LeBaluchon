@@ -1,6 +1,6 @@
 //
-//  URLSession.swift
-//  Le Baluchon
+//  URLSession+GenericCall.swift
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 20/08/2021.
 //

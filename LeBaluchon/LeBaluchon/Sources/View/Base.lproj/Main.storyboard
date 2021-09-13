@@ -299,7 +299,7 @@
                                                                     <constraint firstItem="qkg-TX-O9k" firstAttribute="top" secondItem="D02-nG-Dmq" secondAttribute="top" id="q2V-Tm-pwE"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="center" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="Wtk-jZ-zl8" userLabel="From Amount Text Field">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="Wtk-jZ-zl8" userLabel="From Amount Text Field">
                                                                 <rect key="frame" x="0.0" y="205.66666666666669" width="335" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
@@ -436,7 +436,7 @@
                                                                     <constraint firstAttribute="bottom" secondItem="dTO-zy-lIV" secondAttribute="bottom" id="ow3-1E-0Ll"/>
                                                                 </constraints>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3Q-ub-FB9">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3Q-ub-FB9">
                                                                 <rect key="frame" x="0.0" y="205.33333333333331" width="335" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="43"/>

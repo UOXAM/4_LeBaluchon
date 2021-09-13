@@ -1,6 +1,6 @@
 //
 //  UrlEncodable.swift
-//  Le Baluchon
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 26/08/2021.
 //

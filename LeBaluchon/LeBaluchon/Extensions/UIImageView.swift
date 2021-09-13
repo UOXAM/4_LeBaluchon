@@ -1,12 +1,11 @@
 //
-//  UIView.swift
-//  Le Baluchon
+//  UIImageView.swift
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 01/09/2021.
 //
 
 import UIKit
-
 
 extension UIImageView {
     func load(url: URL) {

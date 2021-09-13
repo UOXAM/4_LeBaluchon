@@ -33,7 +33,7 @@ class CurrencyViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // Dismiss Keybpard
+        // Dismiss Keyboard
         self.hideKeyboardWhenTappedAround()
         
         initialCurrencyPickerView.delegate = self
@@ -134,6 +134,8 @@ class CurrencyViewController: UIViewController {
                         do {
                             let result = try self?.currencyService.calculateAmount(initialAmount: initialAmountDoubled, initialRate: initialRate, finalRate: finalRate)
                             self?.toAmountLabel.text = result
+
+                            self?.toAmountLabel.adjustsFontSizeToFitWidth = true
                             self?.dateCurrencyRateLabel.text = String("\(currencyRates.date) ")
                             print(currencyRates.date)
                             

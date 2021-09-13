@@ -21,8 +21,6 @@ final class TranslationService {
     private let languageFinal = ("target", "en")
     
     
-//    key=AIzaSyCi-P9_GYOlNswiSFuO_80D0mbGZyS2njA&q=bonjour&source=fr&target=en
-
     // MARK: - Initializer
 
     init(session: URLSession = URLSession(configuration: .default)) {

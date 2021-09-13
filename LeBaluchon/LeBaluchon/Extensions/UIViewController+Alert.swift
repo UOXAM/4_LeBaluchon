@@ -1,6 +1,6 @@
 //
-//  UIVIewController+Alert.swift
-//  Le Baluchon
+//  UIViewController+Alert.swift
+//  LeBaluchon
 //
 //  Created by ROUX Maxime on 28/08/2021.
 //

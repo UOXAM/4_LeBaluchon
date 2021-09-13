@@ -1,5 +1,5 @@
 //
-//  AmountError.swift
+//  CurrencyError.swift
 //  LeBaluchon
 //
 //  Created by ROUX Maxime on 13/09/2021.
@@ -17,5 +17,4 @@ extension CurrencyError: CustomStringConvertible {
         case .amountTooBig: return "The amount is too big !"
         }
     }
-
 }

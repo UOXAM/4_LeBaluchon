@@ -184,14 +184,38 @@ class CurrencyServiceTests: XCTestCase {
     }
 
     
-    func testsCalculateAmount_WhenInitialAmountInitialRateAndFinalRateArePassed_ThenShouldReturnCorrectAmount() {
+    // MARK: - Function CalculateAmount
+    
+    func testsCalculateAmount_WhenValidAmountAndRatesArePassed_ThenShouldReturnCorrectAmount() {
         let sut: CurrencyService = .init()
 
-        let result = sut.calculateAmount(initialAmount: 100, initialRate: 1, finalRate: 1.187366)
-        
-        XCTAssertTrue(result == 118.7366)
+        let result = try? sut.calculateAmount(initialAmount: 100, initialRate: 1, finalRate: 1.187366)
+        XCTAssertTrue(result! == "118.74")
     }
     
+    func testsCalculateAmount_WhenTooBigAmountIsPassed_ThenShouldReturnResultAsNil() {
+        let sut: CurrencyService = .init()
+
+        let result = try? sut.calculateAmount(initialAmount: 1000000000000000013287555072, initialRate: 1, finalRate: 1.187366)
+        XCTAssertTrue(result == nil)
+    }
     
+    // MARK: - Function CalculateAmount
+
+    func testCheckNumberNotTooBig_WhenValidAmountNotTooBigIsPassed_ThenShouldReturnTrue() {
+        let sut: CurrencyService = .init()
+        let amountIsNotTooBig = sut.checkNumberNotTooBig(amount: 168775)
+        
+        XCTAssertTrue(amountIsNotTooBig == true)
+        
+    }
     
+    func testCheckNumberNotTooBig_WhenUnvalidAmountTooBigIsPassed_ThenShouldReturnFalse() {
+        let sut: CurrencyService = .init()
+        let amountIsNotTooBig = sut.checkNumberNotTooBig(amount: 1687800000000000119537664)
+        
+        XCTAssertTrue(amountIsNotTooBig == false)
+        
+    }
+
 }

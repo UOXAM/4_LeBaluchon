@@ -25,13 +25,11 @@ final class CurrencyService {
         self.session = session
     }
 
+    
     // MARK: - Network managment
     
-    //
     func fetchCurrencyRates(initialCurrency: String, finalCurrency: String, callback: @escaping (Result<CurrencyRates, NetworkError>) -> Void) {
         guard let baseUrl = URL(string: baseUrlCurrencyRates) else {return}
-//        let parameters = [accessKey, symbols]
-//        let url = encode(baseURL: baseUrl, parameters: parameters)
         let symbols = ("symbols", "\(initialCurrency),\(finalCurrency)")
         let parameters = [accessKey, symbols]
         let url = encode(baseURL: baseUrl, parameters: parameters)
@@ -51,14 +49,7 @@ final class CurrencyService {
         #endif
         session.dataTask(with: url, callback: callback)
     }
-    
-    // MARK: - Fonction
 
-//    func calculateAmount(initialAmount: Double, initialRate: Double, finalRate: Double) -> Double {
-//        return initialAmount / initialRate * finalRate
-//    }
-//
-//}
 
 // MARK: - Fonction
 
@@ -70,7 +61,6 @@ final class CurrencyService {
 
         return stringIntegerResult
     }
-    
     
     func checkNumberNotTooBig(amount: Double) -> Bool {
         guard amount.integer != nil else {
