@@ -86,22 +86,30 @@ class CurrencyViewController: UIViewController {
     
     // MARK: - Action & Network
     
+    @IBAction func clearButton(_ sender: UIButton) {
+        fromAmountTextField.text = ""
+        toAmountLabel.text = "0.00"
+    }
+    
     @IBAction func conversionButton(_ sender: UIButton) {
         
         // Properties
         let initialCurrencyCode : String = getCurrencyCode(pickerView: initialCurrencyPickerView)
         let finalCurrencyCode : String = getCurrencyCode(pickerView: finalCurrencyPickerView)
-        let initialAmount = fromAmountTextField.text
         
+        
+
         // If click on button but initial amount is empty or equal 0 : dont launch network call
-        guard initialAmount != "" || Double(initialAmount!) != 0 else {
+        guard fromAmountTextField.text! != "" && Double(fromAmountTextField.text!) != 0 else {
             toAmountLabel.text = "0.00"
             fromAmountTextField.text = ""
             return
         }
         
+        guard let initialAmount = fromAmountTextField.text else {return}
+
         // Verify initialAmount is convertible in Double
-        guard let initialAmountDoubled = Double(initialAmount!) else {
+        guard let initialAmountDoubled = Double(initialAmount) else {
             self.showAlert(with: "The amount is not valid.")
             toAmountLabel.text = "0.00"
             fromAmountTextField.text = ""

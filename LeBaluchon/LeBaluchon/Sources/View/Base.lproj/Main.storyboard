@@ -169,17 +169,20 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpx-Ce-xy0">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RSF-UY-g43" userLabel="Final Language Text View">
                                                 <rect key="frame" x="0.0" y="89.999999999999957" width="375" height="195.33333333333337"/>
-                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
+                                                <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="158"/>
                                                 <color key="textColor" red="0.031372550870000002" green="0.1686274707" blue="0.46274507050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="KtZ-vk-eex" id="Mws-7C-EO7"/>
+                                                </connections>
+                                            </textView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="cpx-Ce-xy0" firstAttribute="centerX" secondItem="GIV-Ie-A21" secondAttribute="centerX" id="7BT-zN-XBg"/>
                                     <constraint firstItem="NzR-Kc-lfl" firstAttribute="height" secondItem="m89-DC-fNZ" secondAttribute="height" id="ERl-7b-gmO"/>
                                 </constraints>
                             </stackView>
@@ -189,11 +192,26 @@
                                     <constraint firstAttribute="width" secondItem="Lvl-C7-6vp" secondAttribute="height" multiplier="1:1" id="gdf-as-C5t"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0B-R9-KGN">
+                                <rect key="frame" x="315" y="96.666666666666657" width="45" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Dqv-y5-ror"/>
+                                    <constraint firstAttribute="width" constant="45" id="GZv-ro-5Hr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <state key="normal" backgroundImage="clear" catalog="system"/>
+                                <connections>
+                                    <action selector="clearButton:" destination="KtZ-vk-eex" eventType="touchUpInside" id="aCc-rZ-atU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X3V-JA-WfM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="W0B-R9-KGN" firstAttribute="top" secondItem="BDk-HP-DhI" secondAttribute="top" constant="5" id="9nh-h8-6ht"/>
                             <constraint firstItem="X3V-JA-WfM" firstAttribute="bottom" secondItem="Y82-jw-UV8" secondAttribute="bottom" id="BUp-5R-I0I"/>
+                            <constraint firstItem="X3V-JA-WfM" firstAttribute="trailing" secondItem="W0B-R9-KGN" secondAttribute="trailing" constant="15" id="LdU-Be-EPI"/>
                             <constraint firstItem="Lvl-C7-6vp" firstAttribute="height" secondItem="DOI-Ta-qbS" secondAttribute="height" id="Y4h-Qu-36h"/>
                             <constraint firstItem="Lvl-C7-6vp" firstAttribute="centerX" secondItem="DOI-Ta-qbS" secondAttribute="centerX" id="bK6-vD-oYU"/>
                             <constraint firstItem="Y82-jw-UV8" firstAttribute="top" secondItem="X3V-JA-WfM" secondAttribute="top" id="gea-zy-Q5I"/>
@@ -205,7 +223,8 @@
                     <navigationItem key="navigationItem" title="TRADUCTEUR" id="RHg-vJ-e22"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Lvl-C7-6vp" id="3QQ-x6-chJ"/>
-                        <outlet property="finalLanguageLabel" destination="cpx-Ce-xy0" id="zhA-GG-fLT"/>
+                        <outlet property="clearButton" destination="W0B-R9-KGN" id="eOE-Mz-aOC"/>
+                        <outlet property="finalTextView" destination="RSF-UY-g43" id="0wW-lk-L0L"/>
                         <outlet property="initialTextView" destination="BDk-HP-DhI" id="UrJ-MW-nHJ"/>
                         <outlet property="translationButton" destination="DOI-Ta-qbS" id="pDy-6c-mvc"/>
                     </connections>
@@ -488,6 +507,20 @@
                                     <constraint firstItem="97q-Dz-G6a" firstAttribute="height" secondItem="uAr-X8-7D0" secondAttribute="height" id="nrV-to-dMP"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyu-1z-a9T" userLabel="Clear Button">
+                                <rect key="frame" x="310" y="212.33333333333334" width="45" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="cb4-TF-weP"/>
+                                    <constraint firstAttribute="height" constant="45" id="gEz-Gp-UZo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <state key="normal" backgroundImage="clear" catalog="system"/>
+                                <connections>
+                                    <action selector="clearButton:" destination="YuB-2E-MAd" eventType="touchUpInside" id="GGQ-b3-T5l"/>
+                                    <action selector="clearButton:" destination="KtZ-vk-eex" eventType="touchUpInside" id="pbE-4Y-wnq"/>
+                                </connections>
+                            </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="be8-Fe-B6F">
                                 <rect key="frame" x="177.66666666666666" y="295.66666666666669" width="20" height="50"/>
                             </activityIndicatorView>
@@ -501,11 +534,13 @@
                             <constraint firstItem="btt-gz-FsF" firstAttribute="centerY" secondItem="z0g-PW-P0Z" secondAttribute="centerY" id="47p-fa-C05"/>
                             <constraint firstItem="Oqx-eO-MB9" firstAttribute="bottom" secondItem="DkK-ui-irT" secondAttribute="bottom" id="HCG-pF-TfB"/>
                             <constraint firstItem="btt-gz-FsF" firstAttribute="height" secondItem="z0g-PW-P0Z" secondAttribute="height" id="KzC-3f-gFe"/>
+                            <constraint firstItem="Xyu-1z-a9T" firstAttribute="top" secondItem="Wtk-jZ-zl8" secondAttribute="top" id="SD3-bX-Utr"/>
                             <constraint firstItem="be8-Fe-B6F" firstAttribute="centerY" secondItem="z0g-PW-P0Z" secondAttribute="centerY" id="a5X-R1-1qk"/>
                             <constraint firstItem="DkK-ui-irT" firstAttribute="top" secondItem="Oqx-eO-MB9" secondAttribute="top" id="aar-am-D6P"/>
                             <constraint firstItem="DkK-ui-irT" firstAttribute="trailing" secondItem="Oqx-eO-MB9" secondAttribute="trailing" id="dRi-vb-6WE"/>
                             <constraint firstItem="DkK-ui-irT" firstAttribute="leading" secondItem="Oqx-eO-MB9" secondAttribute="leading" id="fiN-xE-aIC"/>
                             <constraint firstItem="be8-Fe-B6F" firstAttribute="height" secondItem="z0g-PW-P0Z" secondAttribute="height" id="lbf-1z-bPw"/>
+                            <constraint firstItem="Xyu-1z-a9T" firstAttribute="trailing" secondItem="Wtk-jZ-zl8" secondAttribute="trailing" id="qzn-tz-1dd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CONVERTISSEUR" largeTitleDisplayMode="always" id="g21-9l-XBn"/>
@@ -573,7 +608,7 @@
                                                 <color key="textColor" red="0.11372549830000001" green="0.2470588088" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4U5-g1-Rab" userLabel="first City Temperature">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4U5-g1-Rab" userLabel="first City Temperature">
                                                 <rect key="frame" x="0.0" y="54.999999999999986" width="375" height="164.66666666666663"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
                                                 <color key="textColor" red="0.11372549830000001" green="0.2470588088" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -663,7 +698,7 @@
                                                 <color key="textColor" red="0.11372549830000001" green="0.2470588088" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scZ-OZ-xDD" userLabel="second City Temperature">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scZ-OZ-xDD" userLabel="second City Temperature">
                                                 <rect key="frame" x="0.0" y="55.000000000000014" width="375" height="164.33333333333337"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
                                                 <color key="textColor" red="0.11372549830000001" green="0.2470588088" blue="0.4941176176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -770,6 +805,7 @@
     </scenes>
     <resources>
         <image name="arrow.down" catalog="system" width="120" height="128"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="cloud.sun.fill" catalog="system" width="128" height="93"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
@@ -778,6 +814,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
