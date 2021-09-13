@@ -25,7 +25,7 @@ class CurrencyViewController: UIViewController {
     // MARK: - Properties
     
     private let currencyService = CurrencyService()
-    private var currencyListArray: [String] = []
+    var currencyListArray: [String] = []
     
     // MARK: - viewDidLoad & Network call (currency list)
     
@@ -91,26 +91,42 @@ class CurrencyViewController: UIViewController {
         // Properties
         let initialCurrencyCode : String = getCurrencyCode(pickerView: initialCurrencyPickerView)
         let finalCurrencyCode : String = getCurrencyCode(pickerView: finalCurrencyPickerView)
+        let initialAmount = fromAmountTextField.text
         
-//        guard let initialAmount :Double = Double(fromAmountTextField.text!) else {return}
-        
-        // Verify something is entered
-        guard (fromAmountTextField.text?.trimmingCharacters(in: .whitespaces)) != nil else { return }
+        // If click on button but initial amount is empty or equal 0 : dont launch network call
+        guard initialAmount != "" || Double(initialAmount!) != 0 else {
+            toAmountLabel.text = "0.00"
+            fromAmountTextField.text = ""
+            return
+        }
         
         // Verify initialAmount is convertible in Double
-        guard let initialAmountDoubled = Double(fromAmountTextField.text!) else { return }
-        do {
-            _ = try? currencyService.checkNumberNotTooBig(amount: initialAmountDoubled)
+        guard let initialAmountDoubled = Double(initialAmount!) else {
+            self.showAlert(with: "The amount is not valid.")
+            toAmountLabel.text = "0.00"
+            fromAmountTextField.text = ""
+            return
+        }
 
-            
-            currencyService.fetchCurrencyRates(initialCurrency: initialCurrencyCode, finalCurrency: finalCurrencyCode) { [weak self] result in
-
+        // Verify initialAmount is not too big
+        guard currencyService.checkNumberNotTooBig(amount: initialAmountDoubled) == true else {
+            self.showAlert(with: CurrencyError.amountTooBig.description)
+            toAmountLabel.text = "0.00"
+            fromAmountTextField.text = ""
+            return
+        }
+        
+        // Rewrite initial amount in right format
+        fromAmountTextField.text = String(format: "%.02f", initialAmountDoubled)
+        
+        // Launch Networkcall
+        currencyService.fetchCurrencyRates(initialCurrency: initialCurrencyCode, finalCurrency: finalCurrencyCode) { [weak self] result in
                 DispatchQueue.main.async {
                     self?.activityIndicator.startAnimating()
                     self?.conversionButton.isEnabled = false
                     switch result {
+                    
                     case .success(let currencyRates):
-                                            
                         // Search the rate of the initial currency in the result of the network call
                         guard let initialRate :Double = Double?(currencyRates.rates[initialCurrencyCode]!) else {return}
                         // Search the rate of the final currency in the result of the network call
@@ -135,7 +151,6 @@ class CurrencyViewController: UIViewController {
                     self?.activityIndicator.stopAnimating()
                 }
             }
-        }
     }
     
     // Take the first part (Currency code) of the row selected in the PickerView
@@ -145,23 +160,4 @@ class CurrencyViewController: UIViewController {
         return currency.components(separatedBy: " : ")[0]
     }
     
-}
-
-    // MARK: - PickerView
-
-extension CurrencyViewController : UIPickerViewDelegate, UIPickerViewDataSource {
-        
-    // Number of elements to show (columns)
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    // Number of rows
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return currencyListArray.count
-    }
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let string = currencyListArray[row]
-        return NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: UIColor.deepBlue])
-    }
-        
 }

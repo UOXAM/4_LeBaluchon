@@ -44,6 +44,7 @@
 		C3ED916326EF547400E5CA6E /* CurrencyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED916226EF547400E5CA6E /* CurrencyError.swift */; };
 		C3ED916526EF6D2100E5CA6E /* UIViewController+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED916426EF6D2100E5CA6E /* UIViewController+Formatting.swift */; };
 		C3ED916726EF6FEE00E5CA6E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED916626EF6FEE00E5CA6E /* UIColor.swift */; };
+		C3ED916926EF8B9F00E5CA6E /* UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED916826EF8B9F00E5CA6E /* UIPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		C3ED916226EF547400E5CA6E /* CurrencyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyError.swift; sourceTree = "<group>"; };
 		C3ED916426EF6D2100E5CA6E /* UIViewController+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Formatting.swift"; sourceTree = "<group>"; };
 		C3ED916626EF6FEE00E5CA6E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C3ED916826EF8B9F00E5CA6E /* UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				C3ED916626EF6FEE00E5CA6E /* UIColor.swift */,
 				C3ED912B26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift */,
 				C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */,
+				C3ED916826EF8B9F00E5CA6E /* UIPickerView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				C3ED916326EF547400E5CA6E /* CurrencyError.swift in Sources */,
 				C3ED916726EF6FEE00E5CA6E /* UIColor.swift in Sources */,
 				C3ED912126EB96D900E5CA6E /* UrlEncodable.swift in Sources */,
+				C3ED916926EF8B9F00E5CA6E /* UIPickerView.swift in Sources */,
 				C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */,
 				C3ED913126EB9F0500E5CA6E /* CurrencyService.swift in Sources */,
 				C3ED913326EB9F1100E5CA6E /* Currency.swift in Sources */,

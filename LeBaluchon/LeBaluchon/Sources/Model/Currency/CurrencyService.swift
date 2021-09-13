@@ -72,9 +72,10 @@ final class CurrencyService {
     }
     
     
-    func checkNumberNotTooBig(amount: Double) throws -> Bool {
-        guard amount.integer != nil else { throw CurrencyError.amountTooBig }
+    func checkNumberNotTooBig(amount: Double) -> Bool {
+        guard amount.integer != nil else {
+            return false
+        }
         return true
     }
 }
-
