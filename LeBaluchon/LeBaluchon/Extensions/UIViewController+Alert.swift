@@ -15,10 +15,4 @@ extension UIViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertController, animated: true)
     }
-
-    func buttonFormatting(button: UIButton) {
-        button.layer.cornerRadius = 5
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.systemGray5.cgColor
-    }
 }

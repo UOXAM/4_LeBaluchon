@@ -17,7 +17,6 @@
 		C3ED911826EB956500E5CA6E /* URLSession+GenericCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */; };
 		C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911A26EB95C800E5CA6E /* NetworkError.swift */; };
 		C3ED911D26EB960300E5CA6E /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */; };
-		C3ED911F26EB968C00E5CA6E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED911E26EB968C00E5CA6E /* UIColor.swift */; };
 		C3ED912126EB96D900E5CA6E /* UrlEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */; };
 		C3ED912426EB99D600E5CA6E /* Meteo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912326EB99D600E5CA6E /* Meteo.swift */; };
 		C3ED912626EB9A4200E5CA6E /* MeteoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED912526EB9A4200E5CA6E /* MeteoService.swift */; };
@@ -41,6 +40,10 @@
 		C3ED915926EBB39A00E5CA6E /* InfoForFakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED915826EBB39A00E5CA6E /* InfoForFakeResponseData.swift */; };
 		C3ED915D26EBB62E00E5CA6E /* CurrencyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED915C26EBB62E00E5CA6E /* CurrencyServiceTests.swift */; };
 		C3ED915F26EBB7ED00E5CA6E /* TranslationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED915E26EBB7ED00E5CA6E /* TranslationServiceTests.swift */; };
+		C3ED916126EF542000E5CA6E /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED916026EF542000E5CA6E /* Double.swift */; };
+		C3ED916326EF547400E5CA6E /* CurrencyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED916226EF547400E5CA6E /* CurrencyError.swift */; };
+		C3ED916526EF6D2100E5CA6E /* UIViewController+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED916426EF6D2100E5CA6E /* UIViewController+Formatting.swift */; };
+		C3ED916726EF6FEE00E5CA6E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED916626EF6FEE00E5CA6E /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +69,6 @@
 		C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+GenericCall.swift"; sourceTree = "<group>"; };
 		C3ED911A26EB95C800E5CA6E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C3ED911C26EB960300E5CA6E /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
-		C3ED911E26EB968C00E5CA6E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEncodable.swift; sourceTree = "<group>"; };
 		C3ED912326EB99D600E5CA6E /* Meteo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteo.swift; sourceTree = "<group>"; };
 		C3ED912526EB9A4200E5CA6E /* MeteoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoService.swift; sourceTree = "<group>"; };
@@ -92,6 +94,10 @@
 		C3ED915826EBB39A00E5CA6E /* InfoForFakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoForFakeResponseData.swift; sourceTree = "<group>"; };
 		C3ED915C26EBB62E00E5CA6E /* CurrencyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyServiceTests.swift; sourceTree = "<group>"; };
 		C3ED915E26EBB7ED00E5CA6E /* TranslationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationServiceTests.swift; sourceTree = "<group>"; };
+		C3ED916026EF542000E5CA6E /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		C3ED916226EF547400E5CA6E /* CurrencyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyError.swift; sourceTree = "<group>"; };
+		C3ED916426EF6D2100E5CA6E /* UIViewController+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Formatting.swift"; sourceTree = "<group>"; };
+		C3ED916626EF6FEE00E5CA6E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,12 +191,14 @@
 			isa = PBXGroup;
 			children = (
 				C3ED911726EB956500E5CA6E /* URLSession+GenericCall.swift */,
+				C3ED916026EF542000E5CA6E /* Double.swift */,
 				C3ED913B26EBAE3300E5CA6E /* UITextView.swift */,
 				C3ED912926EB9C4B00E5CA6E /* UIViewController+Alert.swift */,
+				C3ED916426EF6D2100E5CA6E /* UIViewController+Formatting.swift */,
 				C3ED912726EB9C1A00E5CA6E /* UIImageView.swift */,
+				C3ED916626EF6FEE00E5CA6E /* UIColor.swift */,
 				C3ED912B26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift */,
 				C3ED912026EB96D900E5CA6E /* UrlEncodable.swift */,
-				C3ED911E26EB968C00E5CA6E /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 			children = (
 				C3ED913026EB9F0500E5CA6E /* CurrencyService.swift */,
 				C3ED913226EB9F1100E5CA6E /* Currency.swift */,
+				C3ED916226EF547400E5CA6E /* CurrencyError.swift */,
 			);
 			path = Currency;
 			sourceTree = "<group>";
@@ -400,14 +409,17 @@
 				C3ED913826EBACF900E5CA6E /* TranslationService.swift in Sources */,
 				C3ED911626EB916400E5CA6E /* ApiKeys.swift in Sources */,
 				C3ED912426EB99D600E5CA6E /* Meteo.swift in Sources */,
+				C3ED916326EF547400E5CA6E /* CurrencyError.swift in Sources */,
+				C3ED916726EF6FEE00E5CA6E /* UIColor.swift in Sources */,
 				C3ED912126EB96D900E5CA6E /* UrlEncodable.swift in Sources */,
 				C3ED911B26EB95C800E5CA6E /* NetworkError.swift in Sources */,
-				C3ED911F26EB968C00E5CA6E /* UIColor.swift in Sources */,
 				C3ED913126EB9F0500E5CA6E /* CurrencyService.swift in Sources */,
 				C3ED913326EB9F1100E5CA6E /* Currency.swift in Sources */,
 				C3ED911826EB956500E5CA6E /* URLSession+GenericCall.swift in Sources */,
 				C3ED912C26EB9D9A00E5CA6E /* UIViewController+DismissKeyboard.swift in Sources */,
 				C3ED913626EBACD900E5CA6E /* GoogleTranslation.swift in Sources */,
+				C3ED916526EF6D2100E5CA6E /* UIViewController+Formatting.swift in Sources */,
+				C3ED916126EF542000E5CA6E /* Double.swift in Sources */,
 				C3ED90FE26EB90AC00E5CA6E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

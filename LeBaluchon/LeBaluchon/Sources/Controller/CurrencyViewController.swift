@@ -24,7 +24,7 @@ class CurrencyViewController: UIViewController {
             
     // MARK: - Properties
     
-    private let exchangeService = CurrencyService()
+    private let currencyService = CurrencyService()
     private var currencyListArray: [String] = []
     
     // MARK: - viewDidLoad & Network call (currency list)
@@ -44,12 +44,11 @@ class CurrencyViewController: UIViewController {
         activityIndicator.isHidden = true
         
         // Formatting
-        dateActualizationStackView.layer.borderWidth = 1
-        dateActualizationStackView.layer.borderColor = UIColor.systemGray4.cgColor
+        borderFormatting(element: dateActualizationStackView)
         buttonFormatting(button: conversionButton)
         
         // Network call to keep list of currencies available
-        exchangeService.fetchCurrencyList { [weak self] result in
+        currencyService.fetchCurrencyList { [weak self] result in
             
             DispatchQueue.main.async {
                 // Conversion Button not available
@@ -93,36 +92,48 @@ class CurrencyViewController: UIViewController {
         let initialCurrencyCode : String = getCurrencyCode(pickerView: initialCurrencyPickerView)
         let finalCurrencyCode : String = getCurrencyCode(pickerView: finalCurrencyPickerView)
         
-        guard let initialAmount :Double = Double(fromAmountTextField.text!) else {return}
+//        guard let initialAmount :Double = Double(fromAmountTextField.text!) else {return}
+        
+        // Verify something is entered
+        guard (fromAmountTextField.text?.trimmingCharacters(in: .whitespaces)) != nil else { return }
+        
+        // Verify initialAmount is convertible in Double
+        guard let initialAmountDoubled = Double(fromAmountTextField.text!) else { return }
+        do {
+            _ = try? currencyService.checkNumberNotTooBig(amount: initialAmountDoubled)
 
-        // Network call to keep currency rates
-        exchangeService.fetchCurrencyRates(initialCurrency: initialCurrencyCode, finalCurrency: finalCurrencyCode) { [weak self] result in
+            
+            currencyService.fetchCurrencyRates(initialCurrency: initialCurrencyCode, finalCurrency: finalCurrencyCode) { [weak self] result in
 
-            DispatchQueue.main.async {
-                self?.activityIndicator.startAnimating()
-                self?.conversionButton.isEnabled = false
-                switch result {
-                case .success(let currencyRates):
-                                        
-                    // Search the rate of the initial currency in the result of the network call
-                    guard let initialRate :Double = Double?(currencyRates.rates[initialCurrencyCode]!) else {return}
-                    // Search the rate of the final currency in the result of the network call
-                    guard let finalRate :Double = currencyRates.rates[finalCurrencyCode] else {return}
-
-                    // Calculate the result amount converted
-                    let result = self?.exchangeService.calculateAmount(initialAmount: initialAmount, initialRate: initialRate, finalRate: finalRate)
-                    // Show the result with 2 decimals
-                    self?.toAmountLabel.text = String(format: "%.02f", result!)
-                    self?.dateCurrencyRateLabel.text = String("\(currencyRates.date) ")
-                    print(currencyRates.date)
-                    self?.activityIndicator.stopAnimating()
-
-                case.failure(let error):
-                    self?.showAlert(with: error.description)
+                DispatchQueue.main.async {
+                    self?.activityIndicator.startAnimating()
+                    self?.conversionButton.isEnabled = false
+                    switch result {
+                    case .success(let currencyRates):
+                                            
+                        // Search the rate of the initial currency in the result of the network call
+                        guard let initialRate :Double = Double?(currencyRates.rates[initialCurrencyCode]!) else {return}
+                        // Search the rate of the final currency in the result of the network call
+                        guard let finalRate :Double = currencyRates.rates[finalCurrencyCode] else {return}
+                        do {
+                            let result = try self?.currencyService.calculateAmount(initialAmount: initialAmountDoubled, initialRate: initialRate, finalRate: finalRate)
+                            self?.toAmountLabel.text = result
+                            self?.dateCurrencyRateLabel.text = String("\(currencyRates.date) ")
+                            print(currencyRates.date)
+                            
+                        } catch let error as CurrencyError {
+                            self?.showAlert(with: error.description)
+                        } catch {
+                            self?.showAlert(with: "An unknown error is arrived !")
+                        }
+                        
+                    case.failure(let error):
+                        self?.showAlert(with: error.description)
+                        self?.activityIndicator.stopAnimating()
+                    }
+                    self?.conversionButton.isEnabled = true
                     self?.activityIndicator.stopAnimating()
                 }
-                self?.conversionButton.isEnabled = true
-                self?.activityIndicator.stopAnimating()
             }
         }
     }

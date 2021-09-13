@@ -54,7 +54,27 @@ final class CurrencyService {
     
     // MARK: - Fonction
 
-    func calculateAmount(initialAmount: Double, initialRate: Double, finalRate: Double) -> Double {
-        return initialAmount / initialRate * finalRate
+//    func calculateAmount(initialAmount: Double, initialRate: Double, finalRate: Double) -> Double {
+//        return initialAmount / initialRate * finalRate
+//    }
+//
+//}
+
+// MARK: - Fonction
+
+    func calculateAmount(initialAmount: Double, initialRate: Double, finalRate: Double) throws -> String {
+//        guard initialAmount.integer != nil else { throw BinaryError.numberTooBig }
+        let result = initialAmount / initialRate * finalRate
+        guard result.integer != nil else { throw CurrencyError.amountTooBig }
+        let stringIntegerResult: String = String(format: "%.02f", result)
+
+        return stringIntegerResult
+    }
+    
+    
+    func checkNumberNotTooBig(amount: Double) throws -> Bool {
+        guard amount.integer != nil else { throw CurrencyError.amountTooBig }
+        return true
     }
 }
+

@@ -33,10 +33,9 @@ class TranslationViewController: UIViewController, UITextViewDelegate {
         buttonFormatting(button: translationButton)
         
         // Formatting
-        initialTextView.layer.borderWidth = 1
-        initialTextView.layer.borderColor = UIColor.systemGray4.cgColor
-        finalLanguageLabel.layer.borderWidth = 1
-        finalLanguageLabel.layer.borderColor = UIColor.systemGray4.cgColor
+        borderFormatting(element: initialTextView)
+        borderFormatting(element: finalLanguageLabel)
+
         
         initialTextView.delegate = self
     }
@@ -50,7 +49,6 @@ class TranslationViewController: UIViewController, UITextViewDelegate {
     // MARK: - Action & Network call (rates))
 
     @IBAction func translationButton(_ sender: UIButton) {
-                
         guard let initialText :String = initialTextView.text else {return}
 
         // Network call to get the text translated
